@@ -1,0 +1,134 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 170px 0 104px;
+}
+.title {
+  margin: 0;
+  padding: 0 0 0 78px;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-image: linear-gradient(#ef5da8, #5d5fef) 1;
+  font-size: 56px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #42567a;
+  max-width: 360px;
+}
+.number {
+  margin: 0 0 15px;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #3877ee;
+}
+.text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #42567a;
+}
+.slide {
+  max-width: 320px;
+}
+
+.second-swiper {
+  position: relative;
+  z-index: 1;
+  margin: 0 78px;
+}
+.main-swiper-container {
+  /* padding: 0 78px; */
+}
+.swiper-container {
+  position: relative;
+}
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(56, 119, 238, 0.1);
+  background-image: url("../../images/arrow-icon.svg");
+  background-size: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-left {
+  transform: translateX(50%) rotate(180deg);
+}
+.arrow-right {
+  transform: translateX(-50%);
+  right: 0;
+}
+
+.arrow-main-container {
+  display: flex;
+  gap: 20px;
+  margin: 0 0 56px 78px;
+}
+.arrow-left.swiper-button-disabled,
+.arrow-right.swiper-button-disabled {
+  display: none;
+}
+
+.arrow-main-right,
+.arrow-main-left {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(66, 86, 122, 0.5);
+  z-index: 2;
+  background-color: transparent;
+  box-shadow: 0px 0px 15px 0px rgba(56, 119, 238, 0.1);
+  background-image: url("../../images/arrow-icon-dark.svg");
+  background-size: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.arrow-main-right {
+  transform: rotate(180deg);
+}
+
+.arrow-main_disabled {
+  opacity: 0.5;
+}
+
+.current-contaner {
+  font-family: "PT Sans";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 100px 0 140px;
+  position: relative;
+}
+
+.current-date {
+  font-size: 200px;
+  line-height: 0.8;
+  font-weight: 700;
+}
+.current-date-left {
+  color: #5d5fef;
+}
+.current-date-right {
+  color: #ef5da8;
+}
+.main-count-container {
+  margin: 0 0 20px 78px;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #42567a;
+}

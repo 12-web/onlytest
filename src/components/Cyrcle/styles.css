@@ -1,0 +1,18 @@
+.cyrcle {
+  --cyrcle-width: 400px;
+  --cyrcle-item-width: 40px;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #42567a46;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 0;
+}
+.cyrcle__button-container {
+  position: absolute;
+  top: calc(var(--cyrcle-item-width) * (-1) / 2);
+  left: calc((var(--cyrcle-width) / 2) - var(--cyrcle-item-width) / 2);
+  transform-origin: calc(var(--cyrcle-item-width) / 2)
+    calc((var(--cyrcle-width) / 2) + var(--cyrcle-item-width) / 2);
+}
