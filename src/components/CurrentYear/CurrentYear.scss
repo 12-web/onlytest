@@ -1,0 +1,19 @@
+@import "../../variables/variables.scss";
+
+.current__year {
+  font-size: 200px;
+  line-height: 0.8;
+  font-weight: 700;
+  &-left {
+    color: $blue;
+  }
+  &-right {
+    color: $pink;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .current__year {
+    font-size: 56px;
+  }
+}

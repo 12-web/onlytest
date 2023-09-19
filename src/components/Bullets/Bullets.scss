@@ -1,0 +1,28 @@
+@import "../../variables/variables.scss";
+
+.bullets {
+  display: flex;
+  gap: 10px;
+  display: none;
+  grid-area: bullets;
+  &__item {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: $black-blue;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.4;
+    padding: 0;
+    cursor: pointer;
+    &_active {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bullets {
+    display: flex;
+  }
+}

@@ -1,0 +1,17 @@
+.current__container {
+  font-family: "PT Sans";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 100px 0 140px;
+  position: relative;
+  grid-area: dates;
+}
+
+@media screen and (max-width: 600px) {
+  .current__container {
+    gap: 30px;
+    margin: 57px;
+  }
+}

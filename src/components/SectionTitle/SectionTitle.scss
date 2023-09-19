@@ -1,0 +1,23 @@
+@import "../../variables/variables.scss";
+
+.title {
+  margin: 0;
+  padding: 0 0 0 78px;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-image: linear-gradient($pink, $blue) 1;
+  font-size: 56px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $black-blue;
+  max-width: 360px;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    padding: 0;
+    border: none;
+    font-size: 20px;
+    grid-area: title;
+  }
+}

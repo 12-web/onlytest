@@ -1,0 +1,12 @@
+.arrow-main__container {
+  display: flex;
+  gap: 20px;
+  margin: 0 0 56px 78px;
+  grid-area: arrows;
+}
+@media screen and (max-width: 600px) {
+  .arrow-main__container {
+    margin: 0;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../variables/variables.scss";
+
+.circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: $black-blue;
+    opacity: 0.1;
+  }
+  &:before {
+    height: 1px;
+    width: 100%;
+  }
+  &:after {
+    height: 100%;
+    width: 1px;
+  }
+  &__container {
+    width: 530px;
+    height: 530px;
+    border: 1px solid rgba($black-blue, 0.2);
+    border-radius: 50%;
+    margin: 0 auto 0;
+    z-index: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .circle {
+    display: none;
+    &__container::before,
+    &__container::after {
+      content: none;
+    }
+  }
+}

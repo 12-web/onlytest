@@ -1,0 +1,46 @@
+@import "../../variables/variables.scss";
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 170px 0 104px;
+  display: grid;
+  position: relative;
+  border-left: 1px solid rgba($black-blue, 0.1);
+  border-right: 1px solid rgba($black-blue, 0.1);
+  grid-template-areas:
+    "title"
+    "dates"
+    "counter"
+    "arrows"
+    "swiper";
+}
+.container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: $black-blue;
+  opacity: 0.1;
+  top: 0;
+}
+.container::before {
+  left: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 59px 20px 14px;
+    grid-template-columns: min-content 1fr;
+    column-gap: 40px;
+    grid-template-areas:
+      "title title"
+      "dates dates"
+      "swiper swiper"
+      "counter ."
+      "arrows bullets";
+    border: none;
+  }
+  .container::before {
+    content: none;
+  }
+}

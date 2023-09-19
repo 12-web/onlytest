@@ -1,0 +1,29 @@
+@import "../../variables/variables.scss";
+
+.arrow-main {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba($black-blue, 0.5);
+  z-index: 2;
+  box-shadow: 0px 0px 15px 0px rgba(56, 119, 238, 0.1);
+  background: transparent url("../../images/arrow-icon-dark.svg") center
+    no-repeat;
+  background-size: 10px;
+  cursor: pointer;
+  &_dir_right {
+    transform: rotate(180deg);
+  }
+  &_disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .arrow-main {
+    width: 25px;
+    height: 25px;
+    background-size: 6px;
+  }
+}

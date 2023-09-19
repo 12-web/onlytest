@@ -1,0 +1,36 @@
+@import "../../variables/variables.scss";
+
+.circle__button {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $black-blue;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $black-blue;
+  }
+  &_active {
+    width: 56px;
+    height: 56px;
+    transition: all 0.2s linear;
+    background-color: #fff;
+    border: 1px solid rgba(48, 62, 88, 0.5);
+    &:before {
+      content: none;
+    }
+  }
+}

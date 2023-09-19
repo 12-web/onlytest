@@ -10,12 +10,19 @@
     "@types/node": "^16.18.51",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "animated-number-react": "^0.1.2",
     "gsap": "^3.12.2",
     "react": "^18.2.0",
+    "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-spring": "^9.7.2",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.67.0",
+    "styled-components": "^6.0.8",
     "swiper": "^9.4.1",
     "typescript": "^4.9.5",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.4"
   }
 }

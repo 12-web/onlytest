@@ -1,0 +1,14 @@
+@import "../../variables/variables.scss";
+
+.circle__button-wrapper {
+  $circle-width: 530px;
+  $circle-item-width: 56px;
+  position: absolute;
+  top: calc($circle-item-width * (-1) / 2);
+  left: calc(($circle-width / 2) - $circle-item-width / 2);
+  transform-origin: calc($circle-item-width / 2)
+    calc(($circle-width / 2) + $circle-item-width / 2);
+}
+.circle__button-container {
+  transition: all 0.4s ease-in;
+}
