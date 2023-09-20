@@ -1,10 +1,12 @@
-@import "../../variables/variables.scss";
+@import '../../variables/variables.scss';
 
 .bullets {
-  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 0;
   gap: 10px;
   display: none;
-  grid-area: bullets;
+  transform: translateX(-50%);
   &__item {
     display: inline-block;
     width: 6px;

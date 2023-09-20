@@ -1,6 +1,7 @@
-@import "../../variables/variables.scss";
+@import '../../variables/variables.scss';
 
 .circle__button {
+  font-family: $main-font;
   cursor: pointer;
   width: 56px;
   height: 56px;
@@ -12,8 +13,9 @@
   font-size: 20px;
   line-height: 1.5;
   color: $black-blue;
+
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,15 +24,17 @@
     height: 6px;
     border-radius: 50%;
     background-color: $black-blue;
+    transition: all 0.4s ease-out;
   }
   &_active {
-    width: 56px;
-    height: 56px;
-    transition: all 0.2s linear;
     background-color: #fff;
     border: 1px solid rgba(48, 62, 88, 0.5);
+    z-index: 1;
     &:before {
-      content: none;
+      width: 56px;
+      height: 56px;
+      z-index: 0;
+      background-color: transparent;
     }
   }
 }

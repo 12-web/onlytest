@@ -1,11 +1,19 @@
-import { FC } from "react";
-import "./CurrentYear.scss";
+import { FC } from 'react';
+import './CurrentYear.scss';
 
 type CurrentYearProps = {
   name: string;
   format: string;
-  children: number;
+  children: number | JSX.Element | JSX.Element[];
 };
+
+/**
+ * CurrentYear - элемент года
+ * name - имя свайпера
+ * format - формат года, на основании которого задается стилистика
+ * children - текст элемента (год)
+ */
+
 export const CurrentYear: FC<CurrentYearProps> = ({
   name,
   format,

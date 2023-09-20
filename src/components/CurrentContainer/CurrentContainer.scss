@@ -1,5 +1,4 @@
 .current__container {
-  font-family: "PT Sans";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,6 +6,11 @@
   margin: 100px 0 140px;
   position: relative;
   grid-area: dates;
+}
+@media screen and (max-width: 1023px) {
+  .current__container {
+    gap: 50px;
+  }
 }
 
 @media screen and (max-width: 600px) {

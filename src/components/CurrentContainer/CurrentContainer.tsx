@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useContext, FC } from "react";
+import { useEffect, useState, useContext, FC } from "react";
 import gsap from "gsap";
 import { Circle } from "../Circle/Circle";
 import { CurrentYear } from "../CurrentYear/CurrentYear";
@@ -11,54 +11,46 @@ type CurrentContainerProps = {
   setActiveSlideIndex: (id: number) => void;
 };
 
+/**
+ * CurrentContainer - контенер, который содержит min и max года активного свайпера
+ * name - имя свайпера
+ * activeSlideIndex - индекс антивного свайпера
+ * setActiveSlideIndex - функция установки активного спайпера
+ */
+
 export const CurrentContainer: FC<CurrentContainerProps> = ({
   name,
   activeSlideIndex,
   setActiveSlideIndex,
 }) => {
   const data = useContext(PeriodsContext);
+  const periodStart = data[activeSlideIndex].start;
+  const periodEnd = data[activeSlideIndex].end;
+  /** начальные значения для элементов, содержащих начало и конец периода */
+  const [initialStart] = useState(periodStart);
+  const [initialEnd] = useState(periodEnd);
+  const [startResult, setStarResult] = useState(periodStart);
+  const [endResult, setEndResult] = useState(periodEnd);
 
-  const [startValue, setStartValue] = useState(data[activeSlideIndex].start);
-  const [endValue, setEndValue] = useState(data[activeSlideIndex].end);
-  const [endResult, setEndResult] = useState(data[activeSlideIndex].end);
-  const [startResult, setStartResult] = useState(data[activeSlideIndex].start);
-  const prevStartValue = useRef(data[activeSlideIndex].start);
-  const prevEndValue = useRef(data[activeSlideIndex].end);
-
+  /** смена значений в элементах, содержащих начало и конец периода */
   useEffect(() => {
-    prevStartValue.current = startValue;
-    prevEndValue.current = endValue;
-  }, [startValue, endValue]);
+    setStarResult(periodStart);
+    setEndResult(periodEnd);
+  }, [periodStart, periodEnd]);
 
+  /** анимирование смены цифр начала и конца периода в свайпере */
   useEffect(() => {
-    setStartValue(data[activeSlideIndex].start);
-    setEndValue(data[activeSlideIndex].end);
-  }, [activeSlideIndex]);
-
-  useEffect(() => {
-    const start = startValue + startValue - prevStartValue.current;
-    const end = endValue + endValue - prevEndValue.current;
-    gsap.fromTo(
-      `.current__year-left-${name}`,
-      { textContent: startResult },
-      {
-        textContent: start,
-        duration: 1,
-        snap: { textContent: 1 },
-      }
-    );
-    gsap.fromTo(
-      `.current__year-right-${name}`,
-      { textContent: endResult },
-      {
-        textContent: end,
-        duration: 1,
-        snap: { textContent: 1 },
-      }
-    );
-    setStartResult(start);
-    setEndResult(end);
-  }, [startValue, endValue]);
+    gsap.to(`.current__year-left-${name}`, {
+      textContent: startResult,
+      duration: 1,
+      snap: { textContent: 1 },
+    });
+    gsap.to(`.current__year-right-${name}`, {
+      textContent: endResult,
+      duration: 1,
+      snap: { textContent: 1 },
+    });
+  }, [startResult, endResult, name]);
 
   return (
     <div className="current__container">
@@ -68,10 +60,10 @@ export const CurrentContainer: FC<CurrentContainerProps> = ({
         activeIndex={activeSlideIndex}
       />
       <CurrentYear name={name} format="left">
-        {startResult}
+        {initialStart}
       </CurrentYear>
       <CurrentYear name={name} format="right">
-        {endResult}
+        {initialEnd}
       </CurrentYear>
     </div>
   );

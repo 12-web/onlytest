@@ -1,4 +1,4 @@
-@import "../../variables/variables.scss";
+@import '../../variables/variables.scss';
 
 .arrow-main {
   width: 40px;
@@ -7,7 +7,7 @@
   border: 1px solid rgba($black-blue, 0.5);
   z-index: 2;
   box-shadow: 0px 0px 15px 0px rgba(56, 119, 238, 0.1);
-  background: transparent url("../../images/arrow-icon-dark.svg") center
+  background: transparent url('../../images/arrow-icon-dark.svg') center
     no-repeat;
   background-size: 10px;
   cursor: pointer;

@@ -1,4 +1,4 @@
-@import "../../variables/variables.scss";
+@import '../../variables/variables.scss';
 
 .circle {
   position: absolute;
@@ -10,7 +10,7 @@
   z-index: 1;
   &:before,
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     background-color: $black-blue;
     opacity: 0.1;
@@ -32,8 +32,7 @@
     z-index: 0;
   }
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1023px) {
   .circle {
     display: none;
     &__container::before,

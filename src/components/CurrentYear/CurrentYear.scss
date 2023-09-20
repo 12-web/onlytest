@@ -1,4 +1,4 @@
-@import "../../variables/variables.scss";
+@import '../../variables/variables.scss';
 
 .current__year {
   font-size: 200px;
@@ -9,6 +9,11 @@
   }
   &-right {
     color: $pink;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .current__year {
+    font-size: 110px;
   }
 }
 

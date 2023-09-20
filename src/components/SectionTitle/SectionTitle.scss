@@ -1,4 +1,4 @@
-@import "../../variables/variables.scss";
+@import '../../variables/variables.scss';
 
 .title {
   margin: 0;
@@ -11,6 +11,7 @@
   font-weight: 700;
   color: $black-blue;
   max-width: 360px;
+  grid-area: title;
 }
 
 @media screen and (max-width: 600px) {
@@ -18,6 +19,6 @@
     padding: 0;
     border: none;
     font-size: 20px;
-    grid-area: title;
+    max-width: 150px;
   }
 }
