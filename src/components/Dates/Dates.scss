@@ -1,12 +1,14 @@
 @import '../../variables/variables.scss';
 .container {
   max-width: 1440px;
+  min-width: 320px;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 170px 0 104px;
-  display: grid;
   position: relative;
   border-left: 1px solid rgba($black-blue, 0.1);
   border-right: 1px solid rgba($black-blue, 0.1);
+  display: grid;
   grid-template-areas:
     'title'
     'dates'
